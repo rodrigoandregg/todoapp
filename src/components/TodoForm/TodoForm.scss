@@ -1,0 +1,48 @@
+@import '../../App.scss';
+
+.TodoForm {
+  width: 70%;
+  max-width: 25em;
+  height: 20em;
+  position: relative;
+  @include flexBox($ff: column nowrap, $jc: space-between);
+  gap: 1.5em;
+  background-color: $primary;
+  padding: 1.5em;
+  border-radius: 0.5em;
+
+  &-label {
+    font-size: 1.5em;
+    color: $light;
+    font-weight: 700;
+  }
+
+  &-textarea {
+    width: 100%;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: $acrylic-light;
+    color: $light;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: $acrylic-dark;
+    }
+  }
+
+  &-buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+  }
+
+  &-btn {
+    @include btn;
+
+    &--cancel {
+      background-color: #ff000047;
+    }
+  }
+}

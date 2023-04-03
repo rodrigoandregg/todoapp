@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.CreateTodoButton {
+  position: absolute;
+  @include btn($p: 0.5em);
+  bottom: 0.5em;
+  right: 0.5em;
+  font-size: 1.5em;
+  border-radius: 50%;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}

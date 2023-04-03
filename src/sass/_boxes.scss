@@ -1,0 +1,39 @@
+@mixin flexBox($ff: row nowrap, $jc: center, $ai: center) {
+  display: flex;
+  flex-flow: $ff;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin btn(
+  $bg-clr: $acrylic-light,
+  $hover-bg: $accent,
+  $clr: $light,
+  $hover-clr: $secondary,
+  $p: 0.5em 1em,
+  $fsz: 1.2em
+) {
+  @include flexBox;
+  gap: 1em;
+  padding: $p;
+  font-size: $fsz;
+  font-weight: 700;
+  color: $clr;
+  background-color: $bg-clr;
+  backdrop-filter: blur(1em);
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  transition: all 1s;
+  user-select: none;
+
+  &:hover {
+    transition: all 0.2s;
+    background-color: $hover-bg;
+    color: $hover-clr;
+  }
+
+  &:active {
+    background-color: $primary;
+    color: $light;
+  }
+}

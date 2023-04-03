@@ -1,0 +1,37 @@
+@import '../../App.scss';
+
+.TodoItem {
+  width: 100%;
+  position: relative;
+  border-radius: 0.3em;
+  background-color: $acrylic-dark;
+
+  &-wrapper {
+    width: 100%;
+    padding: 1em;
+    @include flexBox($jc: flex-start);
+    gap: 1em;
+  }
+
+  &-check {
+    font-size: 1.5em;
+    user-select: none;
+  }
+
+  &-text {
+    &::first-letter {
+      text-transform: capitalize;
+    }
+
+    &--completed {
+      color: $dark;
+    }
+  }
+
+  &-remove {
+    position: absolute;
+    right: -0.5em;
+    top: -0.5em;
+    @include btn($p: 0.5em);
+  }
+}

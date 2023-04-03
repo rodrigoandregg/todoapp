@@ -1,0 +1,23 @@
+@import './sass/reset';
+@import './sass/boxes';
+
+.Todo {
+  background-color: $primary;
+  width: 100%;
+  height: 100vh;
+  color: $light;
+  @include flexBox;
+  position: relative;
+
+  &-wrapper {
+    width: 90%;
+    height: 32em;
+    position: relative;
+    max-width: 35em;
+    @include flexBox($ff: column nowrap, $jc: flex-start);
+    gap: 1.5em;
+    background-color: $acrylic-light;
+    padding: 2em 2em 5em;
+    border-radius: 0.5em;
+  }
+}
